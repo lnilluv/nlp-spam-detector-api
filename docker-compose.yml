@@ -1,0 +1,28 @@
+services:
+  spam-api-cpu:
+    build:
+      context: .
+      dockerfile: Dockerfile.cpu
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_BACKEND: keyword
+      MODEL_RUNTIME: cpu
+    profiles: ["cpu"]
+
+  spam-api-nvidia:
+    build:
+      context: .
+      dockerfile: Dockerfile.nvidia
+    ports:
+      - "8001:8000"
+    environment:
+      MODEL_BACKEND: tensorflow
+      MODEL_RUNTIME: nvidia
+      MODEL_PATH: /app/artifacts/model.keras
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    profiles: ["nvidia"]

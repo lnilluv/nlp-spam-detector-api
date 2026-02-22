@@ -1,0 +1,4 @@
+-r base.txt
+tensorflow[and-cuda]==2.18.0; platform_system == "Linux"
+scikit-learn==1.6.1
+pandas==2.2.3

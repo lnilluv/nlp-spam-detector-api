@@ -1,0 +1,8 @@
+.git
+.venv
+.venv313
+__pycache__
+.pytest_cache
+logs
+artifacts
+*.ipynb_checkpoints

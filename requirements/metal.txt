@@ -1,0 +1,5 @@
+-r base.txt
+tensorflow-macos==2.16.2; platform_system == "Darwin" and python_version < "3.13"
+tensorflow-metal==1.1.0; platform_system == "Darwin" and python_version < "3.13"
+scikit-learn==1.6.1
+pandas==2.2.3

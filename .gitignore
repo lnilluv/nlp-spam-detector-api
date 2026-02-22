@@ -103,6 +103,7 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.venv313
 env/
 venv/
 ENV/
@@ -123,3 +124,18 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Project artifacts
+logs/
+artifacts/
+
+# Local-only notes and security checklists
+.local/
+
+# Security and secrets
+.env.*
+!.env.example
+
+# Tool reports
+*.sarif
+*.audit.json
